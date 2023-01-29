@@ -17,3 +17,8 @@ img {
 	gap: 8px;
 	justify-content: center;
 }
+
+.input {
+	border-radius: 8px;
+	padding: 4px 8px;
+}
