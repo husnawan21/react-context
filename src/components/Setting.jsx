@@ -1,20 +1,23 @@
-import { useContext } from "react";
-import { AppContext } from "../context/app-context";
+import { useAppContext } from "../context/app-context";
 
 export default function Setting() {
-	const context = useContext(AppContext);
+	const [state, dispatch] = useAppContext();
 
 	return (
 		<input
 			className="input"
 			type="text"
 			onChange={(e) =>
-				context.setUser({
-					...context.user,
-					name: e.target.value,
+				dispatch({
+					type: "updateUser",
+					payload: {
+						...state.user,
+						name: e.target.value,
+					},
 				})
 			}
 			placeholder="Change name"
+			value={state.user.name}
 		/>
 	);
 }

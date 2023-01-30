@@ -1,11 +1,10 @@
-import { useContext } from "react";
-import { AppContext } from "../context/app-context";
+import { useAppContext } from "../context/app-context";
 
 export default function NavbarUserText() {
-	const context = useContext(AppContext);
+	const [state] = useAppContext();
 	return (
 		<span>
-			Hi, <b>{context.user.name}!</b>
+			Hi, <b>{state?.user?.name}!</b>
 		</span>
 	);
 }

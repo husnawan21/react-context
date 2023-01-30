@@ -22,3 +22,19 @@ img {
 	border-radius: 8px;
 	padding: 4px 8px;
 }
+
+button {
+	border-radius: 8px;
+	border: none;
+	padding: 4px 12px;
+	background-color: #646cff;
+	color: white;
+}
+
+button:hover {
+	background-color: #535bf2;
+}
+
+button:active {
+	background-color: #464dd3;
+}
